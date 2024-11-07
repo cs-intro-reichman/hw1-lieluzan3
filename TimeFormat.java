@@ -1,4 +1,3 @@
-import java.text.DecimalFormat;
 
 public class TimeFormat {
 	public static void main(String[] args) {
@@ -14,27 +13,17 @@ public class TimeFormat {
 		
 		// Does the same with the minutes part of the input.
 		int minutes = Integer.parseInt("" + args[0].charAt(3) + args[0].charAt(4));
-		DecimalFormat formatter=new DecimalFormat("00");
-		String formattedM=formatter.format(0);
-		String formattedH=formatter.format(0);
+		int zeronum=0;
 		//check situation where hours are bigger than 12
 		if(hours>12){
 		
 			hours=hours-12;
 			//separete situations where the input is a single number in pm
-			if(minutes<10 & hours<10){
-				formattedM=formatter.format(minutes);
-				formattedH=formatter.format(hours);
-				System.out.println(formattedH+":"+formattedM+" PM");
+			
+			 if(minutes<10){
+				System.out.println(hours+":"+zeronum+""+minutes+" PM");
 			}
-			else if(minutes<10){
-				formattedM=formatter.format(minutes);
-				System.out.println(+hours+":"+formattedM+" PM");
-			}
-			else if(hours<10){
-				formattedH=formatter.format(hours);
-				System.out.println(formattedH+":"+minutes+" PM");
-			}
+			
 
 			else
 
@@ -43,35 +32,20 @@ public class TimeFormat {
 		}
 		//check situation when the hours are 12 exactly
 		else if(hours==12){
-			if(minutes<10){
-			 	formattedM=formatter.format(minutes);
-				System.out.println(hours+":"+formattedM+" PM");
-			}
+			if(minutes<10)
+
+				System.out.println(hours+":"+zeronum+""+minutes+" PM");
 			else
 
-				System.out.println(hours+":"+""+minutes+" PM");
+				System.out.println(hours+":"+minutes+" PM");
 		}
-		//check situation when the hours and the minuts under 10 both
-		else if(minutes<10 & hours<10){
-			formattedM=formatter.format(minutes);
-			formattedH=formatter.format(hours);
-			System.out.println(formattedH+ ":"+formattedM+" AM");
-
-		}
-		//check just if the hours under 10
-		else if(hours<10){
-			formattedH=formatter.format(hours);
-			System.out.println(formattedH+ ":"+minutes+" AM");
-
-		}
-		//check just if the minutes under 10
+		//check situation when the minutes under 10 both
 		else if(minutes<10){
-			formattedM=formatter.format(minutes);
-			System.out.println(hours+":"+formattedM+" AM");
+
+			System.out.println(hours+ ":"+zeronum+""+minutes+" AM");
 
 		}
 		
-			
 		 
 		else
 			

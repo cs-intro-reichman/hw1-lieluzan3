@@ -9,7 +9,7 @@ public class NumWords {
 
 		//divide the last number 
 		number=number/10;
-		//take out the ones to new variable
+		//take out the tens to new variable
 
 		int ten= number %10;
 
@@ -17,10 +17,10 @@ public class NumWords {
 
 		number=number/10;
 
-		//take out the ones to new variable
+		//take out the hundreds to new variable
 
-		int hundreds=number %10;
-		  number= hundreds;
-		System.out.println(number+" hundreds, "+ten+ " tens, "+"and "+ one +" ones.");
+		int hundreds=number;
+		
+		System.out.println(hundreds+" hundreds, "+ten+ " tens, "+"and "+ one +" ones.");
 	}
 }
