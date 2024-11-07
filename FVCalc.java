@@ -19,7 +19,7 @@ public class FVCalc {
 		}
 		//output the future money ater investing with the rate and the initial money value
 
-		System.out.println(" After "+ yearfirst +" years"+" $"+(int)futurevalue+" save at "
+		System.out.println(" After "+ yearfirst +" years"+" a"+" $"+(int)futurevalue+" save at "
 		+Orate+"%"+" will yield "+"$"+ (int)currentvalue);
 		
 	}
