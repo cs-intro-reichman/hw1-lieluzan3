@@ -2,9 +2,9 @@
 public class FVCalc {
 	public static void main(String[] args){
 		//input inves money, number of years and rate of return
-		int years =Integer.parseInt(args[0]);
-		double currentvalue =Integer.parseInt(args[1]);
-		double rate =Double.parseDouble(args[2]);
+		int years =Integer.parseInt(args[2]);
+		double currentvalue =Integer.parseInt(args[0]);
+		double rate =Double.parseDouble(args[1]);
 		//keep the value of the money in another variable , i am doing the same with the years and the rate.
 		double futurevalue=currentvalue;
 		int yearfirst=years;

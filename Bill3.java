@@ -15,7 +15,7 @@ public class Bill3
 		price=Math.ceil(price);
 		
 	//output the value with the names
-		System.out.println("dear "+name3+", "+ name2 +" and "+ name1+": "+"pay "+price+" Shekels each");			
+		System.out.println("dear "+name3+", "+ name2 +" and, "+ name1+": "+"pay "+price+" Shekels each");			
 				
 		
 		   
