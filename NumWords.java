@@ -20,6 +20,7 @@ public class NumWords {
 		//take out the ones to new variable
 
 		int hundreds=number %10;
-		System.out.println(hundreds+" hundreds, "+ten+ " tens, "+"and "+ one +" ones.");
+		  number= hundreds;
+		System.out.println(number+" hundreds, "+ten+ " tens, "+"and "+ one +" ones.");
 	}
 }

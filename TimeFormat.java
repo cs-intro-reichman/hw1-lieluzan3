@@ -13,19 +13,20 @@ public class TimeFormat {
 		
 		// Does the same with the minutes part of the input.
 		int minutes = Integer.parseInt("" + args[0].charAt(3) + args[0].charAt(4));
+		int zeronum=0;
 		//check situation where hours are bigger than 12
 		if(hours>12){
 		
 			hours=hours-12;
 			//separete situations where the input is a single number in pm
 			if(minutes<10 & hours<10){
-				System.out.println("0"+hours+":"+"0"+minutes+" PM");
+				System.out.println(zeronum+""+hours+":"+zeronum+minutes+" PM");
 			}
 			else if(minutes<10){
-				System.out.println(+hours+":"+"0"+minutes+" PM");
+				System.out.println(+hours+":"+zeronum+""+minutes+" PM");
 			}
 			else if(hours<10){
-				System.out.println("0"+hours+":"+minutes+" PM");
+				System.out.println(zeronum+""+hours+":"+minutes+" PM");
 			}
 
 			else
@@ -40,23 +41,23 @@ public class TimeFormat {
 				System.out.println(hours+":"+"0"+minutes+" PM");
 			else
 
-				System.out.println(hours+":"+"0"+minutes+" PM");
+				System.out.println(hours+":"+zeronum+""+minutes+" PM");
 		}
 		//check situation when the hours and the minuts under 10 both
 		else if(minutes<10 & hours<10){
 
-			System.out.println("0"+hours+ ":"+"0"+minutes+" AM");
+			System.out.println(zeronum+""+hours+ ":"+zeronum+""+minutes+" AM");
 
 		}
 		//check just if the hours under 10
 		else if(hours<10){
 
-			System.out.println("0"+hours+ ":"+minutes+" AM");
+			System.out.println(zeronum+""+hours+ ":"+minutes+" AM");
 
 		}
 		//check just if the minutes under 10
 		else if(minutes<10){
-			System.out.println(hours+ ":"+"0"+minutes+" AM");
+			System.out.println(hours+ ":"+zeronum+""+minutes+" AM");
 
 		}
 		
