@@ -32,12 +32,22 @@ public class TimeFormat {
 		}
 		//check situation when the hours are 12 exactly
 		else if(hours==12){
+			
 			if(minutes<10)
 
 				System.out.println(hours+":"+zeronum+""+minutes+" PM");
 			else
 
 				System.out.println(hours+":"+minutes+" PM");
+		} 
+		//check if the time is 12 am
+		else if(hours==00){
+			hours=12;
+			if(minutes<10){
+				System.out.println(hours+":"+minutes+" AM");
+			}
+			else
+			System.out.println(hours+":"+minutes+" AM");
 		}
 		//check situation when the minutes under 10 both
 		else if(minutes<10){
